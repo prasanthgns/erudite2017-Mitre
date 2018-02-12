@@ -1,0 +1,285 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath,amsthm,amsfonts,amssymb}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{example}{Example}
+\newtheorem{dfn}[theorem]{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem*{claim}{Claim}
+\newtheorem{question}{Question}
+\newtheorem{note}{Note}
+\newtheorem{observation}{Observation}
+\newtheorem{corollary}{Corollary}
+\newtheorem{remark}{Remark}
+\setlength{\textheight}{8.125 in} \setlength{\textwidth}{5.5 in}
+\setlength{\oddsidemargin}{.5in} \setlength{\evensidemargin}{.5in}
+\flushbottom
+
+\usepackage{lineno}
+
+\begin{document}
+	
+\linenumbers
+	
+\begin{center}
+
+{\textbf{Axiomatic characterization of the interval function of unit interval graphs}}
+\end{center}
+
+\section{Introduction} 
+
+Transit functions on discrete structures are
+introduced by Mulder \cite{muld-08} mainly to generalize the concept
+of betweenness in an axiomatic way. A transit function is an abstract notion of an interval. Given a nonempty finite set $V$, a \emph{transit function} $R$ is defined as a function $R:V\times V\to 2^V$ satisfying the three axioms 
+
+\begin{itemize} \item [(t1)] $u\in R(u,v)$, for all $u,v\in V$.
+		\item [(t2)] $R(u,v)=R(v,u)$, for all $u,v\in V$. \item [(t3)]
+			$R(u,u)=\{u\}$, for all $u\in V$.  \end{itemize}
+
+More detailed introductions and definitions related to transit function and their applications can be found in the following papers:
+with emphasis on betweenness \cite{Changat-20, mcjmhm-10, Changat-22,
+momu-02, mu-80}; on intervals \cite{kaMc-01, chklmu-01, mcjmhm-10,
+mu-80, mune-09, nebe-94, ne-08, nebe-01, nebe-02} and on convexity
+\cite{chklmu-01, mchmgs-05, duch-88, momu-02, mu-80}.\\  
+
+
+
+The \emph{underlying graph} $G_{R}$ of a transit function $R$ is the graph with vertex set $V$, where two distinct vertices $u$ and $v$ are joined by an edge if and only if $R(u, v) =\{u,v\}$. Note that in general, $G$ and $G_{R}$ need not be isomorphic graphs, see \cite{muld-08}.\\
+
+A $u,v$-\emph{shortest path} in a connected graph $G$ is a $u,v$-path in $G$ containing the minimum number of edges. The length of a shortest $u,v$-path $P$ (that is, the number of edges in $P$) is the standard distance in $G$. 
+ 
+\noindent The interval function of a connected graph $G$ is defined as
+
+\begin{center}
+$I_G(u,v)=\{w\in V$: $w$ lies on some shortest $u,v$-path$\}$.
+\end{center}
+
+
+
+
+Consider the transit function $R$ defined on nonempty  set $V$, Nebesk\'{y} initiated a very interesting problem on the interval function $I$ of a connected graph $G$ with vertex set $V$. The problem is the following:`` Is it possible to give a characterization of $I$ using a set of simple axioms (first order axioms) defined on $R$? ''\\
+
+Nebesk\'{y} \cite{nebesky-94,nebe-94} proved that there exists such a characterization for the interval function $I(u,v)$ by using axioms on the transit function $R$. In  further papers that followed \cite{nebe-95,ne-08,nebesky-08,nebe-01}, Nebesk\'{y} improved the formulation and proof of this characterization. Finally, Mulder and Nebesk\'{y} \cite{mune-09} gave an optimal characterization of the interval function of a connected graph by using a minimal set of axioms. Recently, in \cite{chfermuna-18} the axiomatic characterization of the interval function
+of a connected graph is extended to that of a disconnected graph. 
+
+But the first systematic study of the interval function is due to Mulder in \cite{mu-80}. The axiomatic characterization of the interval function of trees presented by Sholander in \cite{Sholander-52} with a partial proof. Chv\'{a}tal et al. \cite{Chvatal-11} obtained the completion of this proof. Recently, new characterizations of the interval function of trees using three different sets of axioms which are weaker than those presented in \cite{Chvatal-11,Sholander-52} are discussed in \cite{kaMc-01}. Along with this, the axiomatic characterization of the interval function of block graphs is also obtained in \cite{kaMc-01}. Axiomatic characterization of the interval function of median graphs, modular graphs, geodetic graphs, (claw, paw)-free graphs and bipartite graphs are respectively described in \cite{mu-80,mune-09,nebe-95,chferna-16, mfn}. \\
+
+
+
+A graph $G = (V, E)$ with $V = v_{1}, v_{2}, ..., v_{n} $ is an \emph{interval graph}
+if there exists a family of closed intervals $\mathcal{M}= \{I_{1}, I_{2}, ..., I_{n}\}$
+(interval model) associated to the vertices such that
+$I_{i} \cap I_{j} \neq\emptyset \Leftrightarrow (v_{i} , v_{j} ) \in E$. If an interval graph admits a model with all intervals of the same length, it will be called \emph{unit interval graph}. In other words, a graph $G$ is a \emph{unit interval} graph when $G$ is the intersection graph of a collection of equal-sized intervals on the real line. Let $G$ be a unit interval graph. Then we know that there exists a linear ordering $v_{1}, v_{2}, ... , v_{n}$ of $V(G)$ such that if there
+exists an edge joining $v_{i}$ to $v_{j}$, then $v_{i}, ... , v_{j}$ form a complete subgraph. Moreover, it will be \emph{proper} if it admits an interval model where any interval is not properly contained in another. The following Theorem shows the forbidden induced subgraphs for the unit interval graphs.
+
+\begin{theorem}[\cite{Lekkerkerker-Boland, Roberts}]
+Given a graph $G$. The following are equivalent:
+\begin{itemize}
+\item[(a)] $G$ is unit interval graph,
+\item [(b)] $G$ is proper interval graph,
+\item [(c)] $G$ is {claw, net, tent}-free and chordal.
+\end{itemize}
+
+\end{theorem}
+
+
+In this paper, we attempt to present axiomatic characterization of the interval function of unit interval graphs. For this purpose we introduce the following axioms:
+
+\begin{itemize}
+\item[$(u1)$] if $R(u,v,w)\neq\emptyset$, then $R(u,v,w)\cap \{u,v,w\}=\{u\}$ or $\{v\}$ or $\{w\}$, for all $u,v,w\in V $.
+\end{itemize}
+
+%So far we know that if the interval function $I$ of a connected graph $G$ satisfies axiom $(u1)$, then $G$ is claw-free. 
+
+\begin{itemize}
+\item[$(u2)$] if $R(u,v)\cap R(u,w)\setminus \{u\}\neq\emptyset$ and $R(v,w)\cap R(u,v)\setminus \{v\}\neq\emptyset$ and $R(u,w)\cap R(v,w)\setminus \{w\}\neq\emptyset$, then $R(u,v,w)\cap \{u,v,w\}=\{u\}$ or $\{v\}$ or $\{w\}$, for all $u,v,w\in V $.
+\end{itemize}
+
+%So far we know that if the interval function $I$ of a connected graph $G$ satisfies axiom $(u2)$, then $G$ is (claw, net)-free. 
+
+
+
+
+\section{Interval function of chordal graphs}
+Changat et al. in \cite{Changat-22} characterized the graphs for which the interval function satisfies the axiom $(J0)$:
+
+\begin{itemize}
+\item[$(J_{0})$]  For any pairwise distinct elements  $u, v, x, y \in V$ such that $x \in R(u, y)$ and $y \in R(x, v)$, we have $x \in R(u, v)$.
+\end{itemize}
+
+and these graphs are precisely \emph{Ptolemaic graphs} (Ptolemaic graphs are exactly chordal graphs that are 3-fan-free).
+
+In the following, we present $(J_{0}')$ axiom, which characterize the interval function of only chordal graphs.
+
+\begin{itemize}
+\item[$(J_{0}')$] if $v\in R(u,w)$, $w\in R(v,y)$ and $|(R(u,w)\setminus \{v\})\cap (R(v,y)\setminus \{w\})|\neq 1$ then $v\in R(u,y)$, for all distinct $u,v,w,y \in V$.
+\end{itemize}
+
+\begin{theorem}
+The interval function $I$ of a connected graph $G$, satisfies $(J_{0}')$ if and only if $G$ is a chordal graph.
+\end{theorem}
+\begin{proof}
+Suppose that $G$ is not a chordal graph. Therefore $G$ contains an induced cycle $C$ of length at least 4. Suppose the length of $C$ is even. Hence we have $x_{1}, x_{2}, x_{3}, ..., x_{2n}$, $n\geq 2$ as the vertices of $C$. If $n=2$, let $x_{1}=u$, $x_{2}=v$, $x_{3}=w$ and $x_{4}=y$ and if $n>2$, let $x_{1}=u$, $x_{2}=v$, $x_{4}=w$ and $x_{2+\frac{2n}{2}}=y$. (i.e. the antipodal vertex to $x_{2}=v$ on $C$). 
+It is easy to see that  $v\in I(u,w)$, $w\in I(v,y)$ and $|(I(u,w)\setminus \{v\})\cap (I(v,y)\setminus \{w\})|\neq 1$ but $v\notin R(u,y)$. Now suppose the length of $C$ is odd. let $x_{1}=u$, $x_{2}=v$, $x_{3}=w$ and $x_{2+\lfloor\frac{(2n)+1}{2}\rfloor}=y$. (i.e. the antipodal vertex to both $x_{1}=u$ and $x_{2}=v$ on $C$). It is easy to see that $I$ does not fulfill $(J_{0}')$.\\
+
+Conversely, let $G$ be a chordal graph. Suppose $I$ dose not satisfy $(J_{0}')$ on $G$. Then there exist vertices $u,v,w,y$ in $G$ such that $v\in I(u,w)$, $w\in I(v,y)$ and $|(I(u,w)\setminus \{v\})\cap (I(v,y)\setminus \{w\})|\neq 1$ but $v\notin R(u,y)$. Let $P$ and $Q$ be a $u,w$-shortest path containing $v$ and a $v,y$-shortest path containing $w$ respectively and $R$ be a $u,y$-shortest path that intersect $P$ the most. Let $u_{1}$ be the last common vertex of $P$ and $R$.  $u_{1}$ lies on the $u,v$-subpath of $P$. ($u_{1}$ maybe equal to u but $u_{1}\neq v$, since $v$ does not lie on $R$.) Let $v_{1}$ be the first common vertex of $R$ and $Q$. Since by assumption $u_{1}$ was the last common vertex of $P$ and $R$, hence $v_{1}$ must lie on $w,y$-subpath of $Q$ and $v_{1}$ maybe equal to $v$ but $v_{1}\neq y$.
+Now consider the cycle $C_{1}:u_{1}\rightarrow P\rightarrow v\rightarrow Q\rightarrow w\rightarrow Q\rightarrow v_{1}\rightarrow R\rightarrow u_{1}$, the length of $C_{1}$ is at least 4. If the length of $C_{1}$ is 4, then $C_{1}$ is induced, a contradiction. Therefore, the length of $C_{1}$ ia at least 5. Note that $C_{1}$ can not be induced since $G$ is a chordal graph. To avoid having an induced hole, there must exist some chords in $C_{1}$. There are no possibility of having chords between $u_{1} v$-subpath of $P$ and $P\cap Q\setminus \{v\}\ $, since every such a chord is in contradiction with $P$ being a shortest $u,w$-path containing $x$. Suppose there exist a chord between $u_{1}\rightarrow P\rightarrow v$ and $w\rightarrow Q\rightarrow v_{1}$. Let $u_{1}'$ be the last such vertex on $u_{1}\rightarrow P\rightarrow v$ which is adjacent to  $u_{1}''\in w\rightarrow Q\rightarrow v_{1}$ such that $u_{1}''$ is the nearest vertex to $w$. Therefore the cycle $C_{2}:u_{1}'\rightarrow P \rightarrow v \rightarrow Q \rightarrow w \rightarrow Q \rightarrow u_{1}''u_{1}'$ is of length at least 4, which is a contradiction. Hence there is no chord between $u_{1}\rightarrow P\rightarrow v$ and $w\rightarrow Q\rightarrow v_{1}$. Therefore $C_{1}$ contains two induced paths $P': u_{1}\rightarrow P\rightarrow v\rightarrow Q\rightarrow w \rightarrow v_{1}$ of length at least 4 and $P'': u_{1}\rightarrow R\rightarrow v_{1}$ of length at least 2, (since otherwise $C_{1}$ is induced cycle of length 5, which is a contradiction.)  Now let $P':x_{0}x_{1},...,x_{k}$ and $P'':z_{0}z_{1},...,z_{l}$, where $x_{0}=u_{1}=z_{0}$ and $x_{k}=v_{1}=z_{l}$. Note that $l<k$, since $P''$ is a subpath of $R$ but $P'$ is not a part of any $u,y$-shortest path. $x_{1}z_{1}\in E(G)$, since otherwise we have an induced cycle of length at least 4 on vertices $\{x_{0},x_{1},z_{1},...\}
+$. Moreover, $x_{1}z_{2} \notin E(G)$, since otherwise we get a contradiction by the choice of $v\neq x_{1}$ or by the fact that $v$ is not on a shortest $u,v$-path if $v=x_{1}$. Similarly, $x_{1}z_{i} \notin E(G)$, for every $i\in \{3,...,l\}$. Now $z_{1}x_{2}$ is an edge, otherwise we have an induced cycle of length at least 4 on vertices $\{x_{1}, x_{2},z_{1},...\}$. Now to avoid having an induced cycle on $\{x_{2}, z_{1}, x_{3}...\}$ there must be chord between $z_{1}x_{3}$ or $z_{2}x_{2}$. Suppose $z_{1}x_{3}$ is an edge in $G$, but now we get a contradiction with assumption that $v\in P$, if $x_{3}=w$ and any $x_{i}=w$, for $i\geq 4$. Hence if $z_{1}x_{3}$ is an edge in $G$ then $x_{1}=v$ and $x_{2}=w$ but in this case $|(I(u,w)\setminus \{v\})\cap (I(v,y)\setminus \{w\})|=\{z_{1}\}$, which is contradiction with assumption. Therefore the only possibility is $z_{2}x_{2}$ is an edge in $G$. But now if $x_{1}=v$ and $x_{2}=w$ we have $|(I(u,w)\setminus \{v\})\cap (I(v,y)\setminus \{w\})|=\{z_{1}\}$, which is a contradiction with assumption.
+
+\end{proof}
+
+
+
+\section{Interval function of claw-free graphs }
+
+\begin{itemize}
+\item[$(u1)$] if $R(u,v,w)\neq\emptyset$, then $R(u,v,w)\cap \{u,v,w\}=\{u\}$ or $\{v\}$ or $\{w\}$, for all $u,v,w\in V $.
+\end{itemize}
+
+
+\begin{theorem}
+The interval function $I$ of a connected graph $G$, satisfies $(u1)$ if and only if $G$ is a claw-free graph.
+\end{theorem}
+\begin{proof}
+Suppose that $G$ contains a claw as an induced subgraphs. It is easy to see that in a graph with an induced claw shown in Figure 1, there exist $u,v,w$ such that $I(u,v,w)\neq\emptyset$, but $I(u,v,w)\cap \{u,v,w\}=\emptyset$ and $I$ does not fulfill $(u1)$.\\
+
+Conversely,  let $G$ be a claw-free graph. Suppose $I$ does not satisfy $(u1)$.  Hence there exist $u,v,w$ in $G$ such that $I(u,v,w)\neq\emptyset$, but $R(u,v,w)\cap \{u,v,w\}\neq\{u\}$ or $\{v\}$ or $\{w\}$.
+Consider $u,v$-shortest path. Note that $w$ does not lie on $u,v$-shortest path, otherwise $I(u,v,w)=\{w\}$ and $I(u,v,w)\cap\{u,v,w\} =\{w\}$, a contradiction with assumption. Moreover, $u,w$-shortest path intersects $u,v$-shortest path, otherwise $I(u,v,w)\cap\{u,v,w\} =\{u\}$, a contradiction with assumption. Let $x$ be the first common vertex between $u,w$-shortest path and $u,v$-shortest path. It is easy to see that we get a claw on $x$ and neighbors of $x$,
+$N(x)=\{z,y,y'\}$, where $y'$ lies on $u,x$ subpath of $P$ and $y$ lies on $x,v$ subpath of $P$ and $z$ lies on $x,w$ subpath of $Q$. To avoid having claw as an induced subgraph there must be edges between $z,y'$ or $y,y'$ or $z,y$. But $z,y'$ and $y,y'$ are not an edge since we get a contradiction with $P$ and $Q$ being the shortest path containing $x$. Suppose $z,y$ is an edge.
+If $z=w$ and $y=v$  we get an induced paw on $\{y',x,v,w\}$ and $I(u,v,w)=\emptyset$ or if $z\neq w$ and $y\neq v$ we have an induced net $\{y',x,y,z\}$ and neighborhood of $z$ on $x,w$-subpath of $Q$ and neighborhood of $y$ on $x,v$-subpath of $P$. It is easy to see that $I(u,v,w)=\emptyset$, a contradiction with assumption.  
+\end{proof}
+
+\section{Interval function of net-free graphs }
+
+\begin{itemize}
+\item[$(u2)$] for any $u_1 \neq u_2\neq u_3 \neq v_1 \neq v_2 \neq v_3 \in V $, $R(u_1,v_3) = \{u_1,v_2,v_3\}, R(u_2,v_1) = \{u_1,v_1,v_3\}, R(u_3,v_2) = \{u_3,v_1,v_2\}$, then exist $v,v' \in \{v_1,v_2,v_3\}$ such that $R(v,v')=\{v,v'\}$ or exists $i \in \{1,2,3\}$ such that $R(u_i,v_i) =  \{u_i,v_i\}$.
+\end{itemize}
+
+Explanation: $R(u_1,v_3) = \{u_1,v_2,v_3\}, R(u_2,v_1) = \{u_1,v_1,v_3\}, R(u_3,v_2) = \{u_3,v_1,v_2\}$ imply the net formed by the edges $u_1v_2, u_2v_3, u_3v_1, v_1v_2, v_1v_3, v_2v_3$. And the edges $u_1v_3$, $u_2v_1, u_3v_2$ do not exist. Then, there is an edge between the vertices of $\{v_1,v_2,v_3\}$ or the edge $u_iv_i$ for some $i \in \{1,2,3\}$.
+
+
+\section{Interval function of (claw, net)-free graphs }
+
+\begin{itemize}
+\item[$(u2)$] if $R(u,v)\cap R(u,w)\setminus \{u\}\neq\emptyset$ and $R(v,w)\cap R(u,v)\setminus \{v\}\neq\emptyset$ and $R(u,w)\cap R(v,w)\setminus \{w\}\neq\emptyset$, then $R(u,v,w)\cap \{u,v,w\}=\{u\}$ or $\{v\}$ or $\{w\}$, for all $u,v,w\in V $.
+\end{itemize}
+
+\begin{theorem}
+The interval function $I$ of a connected graph $G$, satisfies $(u2)$ if and only if $G$ is a (claw, net)-free graph.
+\end{theorem}
+\begin{proof}
+Suppose that $G$ contains claw or net as an induced subgraphs. It is easy to see that in a graph with an induced claw shown in Figure 1, there exist $u,v,w$ such that $I(u,v)\cap I(u,w)\setminus \{u\}=z$ and $I(v,w)\cap I(u,v)\setminus \{v\}=z$ and $I(u,w)\cap I(v,w)\setminus \{w\}=z$, and $I(u,v,w)\cap \{u,v,w\}=z$ and $R(u,v,w)\cap \{u,v,w\}=\emptyset$. Hence the interval function $I$ does not satisfy $(u2)$. Moreover, If $G$ contains a net as an induced subgraph, we can find vertices $u,v,w$ shown in Figure 1, such that $I(u,v)\cap I(u,w)\setminus \{u\}=x$ and $I(v,w)\cap I(u,v)\setminus \{v\}=y$ and $I(u,w)\cap I(v,w)\setminus \{w\}=z$, and $I(u,v,w)=\emptyset$. There $I$ does not fulfill $(u2)$.\\
+ 
+Conversely, let $G$ be a (claw, net)-free graph. Assume that $I(u,v)\cap I(u,w)\setminus \{u\}\neq\emptyset$ and $I(v,w)\cap I(u,v)\setminus \{v\}\neq\emptyset$ and $I(u,w)\cap I(v,w)\setminus \{w\}\neq\emptyset$. But $I$ does not satisfy $(u2)$ on $G$.
+Let $P$ and $Q$ be a $u,v$-shortest path and $u,w$-shortest path respectively. Note that $w$ does not lie on $P$, since otherwise, $Q$ is a subpath of $P$ and therefore $I(v,w)\cap I(u,w)\setminus \{w\}=\emptyset$, a contradiction with assumption. Furthermore, $Q$ must interest $P$, since otherwise, $I(u,v)\cap I(u,w)\setminus \{u\}=\emptyset$, a contradiction with assumption. Let $x$ be the first common vertex between $P$ and $Q$. It is easy to see that we have a claw on $x$ and neighbors of $x$, $N(x)=\{z,y,y'\}$, where $y'$ lies on $u,x$ subpath of $P$ and $y$ lies on $x,v$ subpath of $P$ and $z$ lies on $x,w$ subpath of $Q$. Not that $z\neq w$ otherwise $I(u,w)\cap I(v,w)\setminus \{w\}=\emptyset$, a contradiction with assumption and also $y\neq v$ otherwise $I(v,w)\cap I(v,u)\setminus \{v\}=\emptyset$. To avoid having a claw an induced subgraph there must be edges between $z,y'$ or $y,y'$ or $z,y$. But $z,y'$ and $y,y'$ are not an edge since we get a contradiction with $P$ and $Q$ being the shortest path containing $x$. Suppose $z,y$ is an edge. Now we have an induced net on $\{x,z,y,y'\}$, neighborhood of $z$ on $x,w$-subpath of $Q$ and neighborhood of $y$ on $x,v$-subpath of $P$. Which is a final contradiction.
+ 
+\end{proof}
+
+
+\section{Interval function of tent-free graphs}
+
+\begin{itemize}
+\item[$(u3)$] for any $a\neq b\neq c\neq x \neq y\neq z\in V $, $R(x,y) = \{a,x,y\}, R(y,z) = \{b,y,z\}, R(x,z) = \{c,x,z\}, R(a,b,c) = \{a,b,c\}$, then $R(a,z)=\{a,z\}$ or $R(b,x)=\{b,x\}$ or $R(c,y)=\{c,y\}$.
+\end{itemize}
+
+Explanation: $R(x,y) = \{a,x,y\}, R(y,z) = \{b,y,z\}, R(x,z) = \{c,x,z\}$ imply that $a,y,b,z,c,x$ is a cycle an the edges $xy, yz, xz$ do not exist. $R(a,b,c) = \{a,b,c\}$ together the above 3 conditions imply that $\{a,b,c\}$ is a triangle. Then, we have a tent and one of the three possible edges must exist.
+
+\begin{itemize}
+\item[$(u3)$] for any $a\neq b\neq c\neq x \neq y\neq z\in V $, $R(a,b)=\{a,b\}$, $R(a,c)=\{a,c\}$, $R(b,c)=\{b,c\}$, $a\in R(x,z)$, $b\in R(y,z)$, $c\in R(x,y)$, then $R(x,b)=\{x,b\}$ or $R(y,a)=\{y,a\}$ or 
+$R(z,c)=\{z,c\}$.
+\end{itemize}
+So far we know that if the interval function $I$ of a connected graph $G$ satisfies axiom $(u3)$, then $G$ does not contain net, tent, $X$-house+$e$ and $3-fan+e$ as an induced subgraph. Note that an edge $e$ is adjacent to some specific vertex in $X$-house and 3-fan. Furthermore, the family of forbidden induced subgraphs for the interval function satisfied by the axioms$(u3)$ might be bigger. I think axiom $(u3)$ is not a good axiom, we need only tent-free graphs. I tried but have not found a new axiom for tent-free graphs yet.
+
+
+\section{Interval function of unit interval graphs}
+
+
+
+\begin{thebibliography}{99}
+
+
+
+
+
+
+\bibitem{kaMc-01} K.~Balakrishnan, M.~Changat, A.K.~Lakshmikuttyamma, J.~Mathew, H.M.~Mulder, P.G.~Narasimha-Shenoi, N.~Narayanan, Axiomatic characterization of the interval function of a block graph. Disc. Math, 338 (2015), 885-894.
+
+
+\bibitem{Lekkerkerker-Boland}
+C. Lekkerkerker and J. Boland, Representation of a finite graph by a set of intervals on the real line, Fundamenta Mathematicae 51 (1962), 45-64.
+
+\bibitem{chklmu-01} M.~Changat, S.~Klav\v{z}ar, H.M.~Mulder, The all-paths transit function of a graph. Czech. Math. J. 51 (126) (2001), 439-448.
+
+
+\bibitem{Changat-20} M.~Changat, J.~Mathew, Induced path transit function, monotone and Peano axioms. Disc. Math, 286.3 (2004), 185-194. 
+                             
+\bibitem{mchmgs-05} M.~Changat, H.M.~Mulder, G.~Sierksma, Convexities related
+to path properties on graphs, Disc. Math. 290 (2-3) (2005), 117-131. 
+   
+\bibitem{mcjmhm-10} M.~Changat, J.~Mathew, H.M.~Mulder, The induced path function, monotonicity and betweenness, Disc. Appl. Math. 158(5)(2010), 426-433.
+  
+\bibitem{Changat-22} M.~Changat, A.K.~lakshmikuttyamma, J.~Mathew, I.~Peterin, P.G.~Narasimha-Shenoi, G.~Seethakuttyamma, S.~\v{S}pacapan, A forbidden
+subgraph characterization of some graph classes using betweenness axioms, Disc. Math. 313 (2013), 951-958.
+
+\bibitem{chferna-16}
+ M.~Changat., F.~Hossein Nezhad. and N.~Narayanan: Axiomatic Characterization of Claw and Paw-Free Graphs Using Graph Transit Functions. In Conference on Algorithms and Discrete Applied Mathematics, Springer International Publishing, (2016) 115-125
+
+
+\bibitem{mfn} M.~Changat. , F.~Hossein Nezhad, N.~Narayanan, Axiomatic characterization of the interval function of a bipartite graph. In Conference on Algorithms and Discrete Applied Mathematics. Springer-LNCS, (2017), 96-106.
+
+\bibitem{chfermuna-18}
+M.~Changat., F.~Hossein Nezhad. H.M.~Mulder and N.~Narayanan: A note on the interval function of a disconnected graph, Discussiones Mathematicae Graph Theory, 38, no. 1 (2018), 39-48
+
+\bibitem{Chvatal-11}
+V.~Chv\'{a}tal, D.~Rautenbach, P.M.~Sch\"{a}fer, Finite Sholander trees, trees, and their betweenness, Disc. Math, 311 (2011), 2143-2147.
+
+\bibitem{duch-88} P.~Duchet, Convex sets in graphs, II. Minimal path convexity, J. Combin. Theory Ser B. 44 (1988), 307-316.
+
+
+\bibitem{momu-02} M.A.~Morgana, H.M.~Mulder, The induced path convexity, betweenness and svelte graphs, Disc. Math. 254 (2002), 349-370. 
+
+\bibitem{mu-80} H.M.~Mulder, The Interval function of a Graph. MC Tract 132,
+Mathematisch Centrum, Amsterdam, 1980.
+
+
+\bibitem{muld-08} H.M.~Mulder, Transit functions on graphs (and posets). 
+Convexity in Discrete Structures (M.~Changat, S.~Klav\v{z}ar, H.M.~Mulder,
+A.~Vijayakumar, eds.), Lecture Notes Ser. 5, Ramanujan Math. Soc. (2008), 117-130.
+
+\bibitem{mune-09} H.M.~Mulder, L.~Nebesk\'{y}, Axiomatic characterization of the interval function of a graph.  European J. Combin. 30 (2009), 1172-1185.
+                              
+\bibitem{nebe-94} L.~Nebesk\'{y}, A characterization of the interval function of a connected graph, Czech. Math. J. 44 (1994), 173-178.
+
+\bibitem{nebesky-94}
+L.~Nebesk\'{y}, A characterization of the set of all shortest paths in a connected
+graph. Mathematica Bohemica 119.1 (1994): 15-20.
+
+\bibitem{nebe-95}
+L.~Nebesk\'{y}, A characterization of geodetic graphs. Czechoslovak Mathematical
+Journal 45.3 (1995): 491-493.
+
+\bibitem{ne-08} L.~Nebesk\'{y}, Characterizing the interval function of a connected graph. Math. Bohem. 123.2 (1998), 137-144.
+
+\bibitem{nebesky-08}   
+L.~Nebesk\'{y}, A new proof of a characterization of the set of all geodesics in a
+connected graph. Czechoslovak Mathematical Journal 48.4 (1998): 809-813.
+
+\bibitem{nebe-01} L.~Nebesk\'{y}, Characterization of the interval function of a (finite or infinite) connected graph, Czech. Math. J. 51 (2001), 635-642.
+                         
+\bibitem{nebe-02} L.~Nebesk\'{y}, The induced paths in a connected graph and a
+ternary relation determined by them. Math. Bohem. 127 (2002), 397-408.
+
+\bibitem{Roberts}
+F. S. Roberts, Indifference graphs, Proof Techniques in Graph Theory, Proceedings of the Second Ann Arbor Graph Theory Conference (New York), Academic Press, 1969, pp. 139-146.
+
+\bibitem{Sholander-52}
+M.~Sholander, Trees, lattices, order, and betweenness, Proc. Amer. Math. Soc. 3 (1952), 369-381.
+
+\end{thebibliography}
+
+\end{document}
